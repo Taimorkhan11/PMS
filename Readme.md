@@ -27,12 +27,15 @@ Simple JWT for JWT authentication
 
 Create a Virtual Environment
 
-python -m venv venv             # because I have linux
-source venv/bin/activate        # command for linux
+-------------------python -m venv venv             # because I have linux
+-------------------source venv/bin/activate        # command for linux
 
 Install Dependencies
-pip install -r requirements.txt
-
+-------------pip install -r requirements.txt
+Migrate
+-------------python manage.py makemigrations
+-------------python manage.py migrate
+-------------python manage.py runserver
 
 JWT Authentication
 This is used in all APIs and you can get from the logic api there are 2 ways to authentication one is that we can signup and directly hit the apis with token but in my project firstly you can hit signp api after this login api and login api give you a access_token and refresh_token you use the access_token with following below syntax in postman or Frontend.
